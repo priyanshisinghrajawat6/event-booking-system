@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Booking Platform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <h2>EventHub</h2>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#categories">Categories</a></li>
+            <li><a href="#booking">Book Ticket</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="hero">
+
+    <div class="hero-content">
+        <h1>Discover Amazing Events</h1>
+
+        <p>
+            Find concerts, workshops, seminars and exciting events
+            happening near you.
+        </p>
+
+        <a href="#events" class="btn">Explore Events</a>
+    </div>
+
+</section>
+<section id="events" class="events-section">
+
+    <h2>Upcoming Events</h2>
+
+    <div class="filters">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search events..."
+        >
+
+        <select id="categoryFilter">
+            <option value="all">All Categories</option>
+            <option value="music">Music</option>
+            <option value="workshop">Workshop</option>
+            <option value="technology">Technology</option>
+            <option value="sports">Sports</option>
+        </select>
+
+    </div>
+
+    <div id="eventContainer" class="event-container">
+
+        <div class="event-card" data-category="music">
+            <img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a" alt="Music Event">
+
+            <h3>Live Music Night</h3>
+
+            <p>📅 20 August 2026</p>
+            <p>📍 Gwalior</p>
+            <p>💰 ₹499</p>
+
+            <button onclick="selectEvent('Live Music Night')">
+                Book Ticket
+            </button>
+        </div>
+
+
+        <div class="event-card" data-category="technology">
+            <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87" alt="Technology Event">
+
+            <h3>Tech Conference 2026</h3>
+
+            <p>📅 25 August 2026</p>
+            <p>📍 Delhi</p>
+            <p>💰 ₹799</p>
+
+            <button onclick="selectEvent('Tech Conference 2026')">
+                Book Ticket
+            </button>
+        </div>
+
+
+        <div class="event-card" data-category="workshop">
+            <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72" alt="Workshop">
+
+            <h3>Web Development Workshop</h3>
+
+            <p>📅 30 August 2026</p>
+            <p>📍 Bhopal</p>
+            <p>💰 ₹299</p>
+
+            <button onclick="selectEvent('Web Development Workshop')">
+                Book Ticket
+            </button>
+        </div>
+
+    </div>
+
+</section>
+<section class="details-section">
+
+    <h2>Why Choose EventHub?</h2>
+
+    <div class="details-container">
+
+        <div>
+            <h3>🎟 Easy Booking</h3>
+            <p>Book your event tickets quickly and easily.</p>
+        </div>
+
+        <div>
+            <h3>📅 Upcoming Events</h3>
+            <p>Discover interesting events happening around you.</p>
+        </div>
+
+        <div>
+            <h3>🔒 Secure Registration</h3>
+            <p>Your booking information is handled safely.</p>
+        </div>
+
+    </div>
+
+</section>
+<section id="booking" class="booking-section">
+
+    <h2>Book Your Ticket</h2>
+
+    <form id="bookingForm">
+
+        <input
+            type="text"
+            id="name"
+            placeholder="Your Name"
+            required
+        >
+
+        <input
+            type="email"
+            id="email"
+            placeholder="Email Address"
+            required
+        >
+
+        <input
+            type="tel"
+            id="phone"
+            placeholder="Phone Number"
+            required
+        >
+
+        <select id="eventSelect" required>
+
+            <option value="">
+                Select Event
+            </option>
+
+            <option value="Live Music Night">
+                Live Music Night
+            </option>
+
+            <option value="Tech Conference 2026">
+                Tech Conference 2026
+            </option>
+
+            <option value="Web Development Workshop">
+                Web Development Workshop
+            </option>
+
+        </select>
+
+        <input
+            type="number"
+            id="tickets"
+            min="1"
+            max="10"
+            placeholder="Number of Tickets"
+            required
+        >
+
+        <button type="submit">
+            Confirm Booking
+        </button>
+
+    </form>
+
+    <div id="bookingMessage"></div>
+
+</section>
+<footer id="contact">
+
+    <h3>EventHub</h3>
+
+    <p>
+        Discover. Book. Enjoy.
+    </p>
+
+    <p>
+        Email: support@eventhub.com
+    </p>
+
+    <p>
+        © 2026 EventHub. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
